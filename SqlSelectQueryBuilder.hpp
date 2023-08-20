@@ -3,12 +3,13 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <algorithm>
 
 
 class SqlSelectQueryBuilder final {
 public:
     SqlSelectQueryBuilder() = default;
-    ~SqlSelectQueryBuilder() {};
+    ~SqlSelectQueryBuilder() {}
 
     SqlSelectQueryBuilder(const SqlSelectQueryBuilder& other) = delete;
     SqlSelectQueryBuilder(SqlSelectQueryBuilder&& other) noexcept = delete;

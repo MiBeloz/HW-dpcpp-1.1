@@ -53,7 +53,7 @@ std::string SqlSelectQueryBuilder::BuildQuery() noexcept {
         size_t i = 0;
         for (const auto& it : m_where) {
             i++;
-            query += it.first + '=' + it.second;
+            query += it.first + "=\'" + it.second + '\'';
             if (i == m_where.size()) {
                 query += ";\"";
             }
